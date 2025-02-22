@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.project.TestBinary" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-02-22T17:28:48" hostname="codespaces-57002d" time="0.007">
+<testsuite name="com.example.project.TestBinary" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-02-22T17:41:27" hostname="codespaces-57002d" time="0.042">
   <properties/>
   <testcase name="testBinarySearch_SingleElementArray_TargetFound()" classname="com.example.project.TestBinary" time="0.001"/>
-  <testcase name="testBinarySearch_TargetNotFound()" classname="com.example.project.TestBinary" time="0.001"/>
-  <testcase name="testBinarySearch_SingleElementArray_TargetNotFound()" classname="com.example.project.TestBinary" time="0.001"/>
-  <testcase name="testBinarySearch_TargetAtEnd()" classname="com.example.project.TestBinary" time="0.0"/>
-  <testcase name="testBinarySearch_TargetFound()" classname="com.example.project.TestBinary" time="0.001"/>
-  <testcase name="testBinarySearch_EmptyArray()" classname="com.example.project.TestBinary" time="0.001"/>
-  <testcase name="testBinarySearch_TargetAtStart()" classname="com.example.project.TestBinary" time="0.001"/>
+  <testcase name="testBinarySearch_TargetNotFound()" classname="com.example.project.TestBinary" time="0.008"/>
+  <testcase name="testBinarySearch_SingleElementArray_TargetNotFound()" classname="com.example.project.TestBinary" time="0.002"/>
+  <testcase name="testBinarySearch_TargetAtEnd()" classname="com.example.project.TestBinary" time="0.003"/>
+  <testcase name="testBinarySearch_TargetFound()" classname="com.example.project.TestBinary" time="0.002"/>
+  <testcase name="testBinarySearch_EmptyArray()" classname="com.example.project.TestBinary" time="0.005"/>
+  <testcase name="testBinarySearch_TargetAtStart()" classname="com.example.project.TestBinary" time="0.013"/>
   <system-out><![CDATA[0
 3
 5
