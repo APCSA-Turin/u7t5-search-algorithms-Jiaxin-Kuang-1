@@ -5,34 +5,33 @@ public class BinarySearch {
     // implements binary search on the elements list for target,
     // and returns the index at which the target is found, or -1 if
     public static int binarySearch(int[] elements, int target) {
-        if(elements.length == 0){
-            return -1;
-        }
+        int loop = 0; 
+        int maxLoop = (int) Math.ceil(Math.log(elements.length) / Math.log(2));
+        int leftIdx = 0;  
+        int rightIdx = elements.length - 1; 
 
-        int loopCounter = 0; 
-        int maxLoop = (int) Math.sqrt(elements.length) + 1;
-        int leftIdx = 0;  // TODO: assign this initial value
-        int rightIdx = elements.length; // TODO: assign this initial value
+        if(elements.length == 1){
+            if(elements[0] == target){
+                return 0;
+            }
+        }
         
-        while(loopCounter < maxLoop) {  // TODO: determine this condition (hint: see slides 61-63)
-            loopCounter++; 
-            int middleIdx = (rightIdx + leftIdx) / 2; // TODO: determine what this should be
+        while(loop < maxLoop){
+        loop++; 
+            int middleIdx = (rightIdx + leftIdx) / 2; 
             System.out.println(middleIdx);
             if(elements[middleIdx] == target){
                 return middleIdx;
             }
             else{
                 if(elements[middleIdx] < target){
-                    leftIdx = middleIdx;
+                    leftIdx = middleIdx + 1;
                 }
                 else{
-                    rightIdx = middleIdx;
+                    rightIdx = middleIdx - 1;
                 }
             }
         }
-
-        //     // TODO: write the rest of the code to compare middleIdx to the target
-        //     //  and adjust leftIdx and rightIdx as appropriate (see slides if needed)
-        return -1; // not found
+        return -1; 
     }
 }

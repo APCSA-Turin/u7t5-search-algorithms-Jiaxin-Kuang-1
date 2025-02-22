@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.lang.Math;
 
 
 public class SpellChecker {
@@ -50,12 +51,13 @@ public class SpellChecker {
      *  prints that value out before returning.
      */
     public boolean binarySpellCheck(String word) {
+        loopCounter = 0;
         int loop = 0; 
-        int maxLoop = (int) Math.sqrt(dictionary.size()) + 1;
+        int maxLoop = (int) Math.ceil(Math.log(dictionary.size()) / Math.log(2));
         int leftIdx = 0;  
         int rightIdx = dictionary.size() - 1; 
         
-        while(loop < maxLoop && leftIdx <= rightIdx) {  
+        while(loop < maxLoop) {  
             loop++; 
             loopCounter ++;
             int middleIdx = (rightIdx + leftIdx) / 2; 
@@ -107,6 +109,7 @@ public class SpellChecker {
             } else {
                 System.out.println("-- " + word + " was NOT found in the dictionary (so it's not spelled correctly)");
             }
+            System.out.println("Found at " + checker.loopCounter);
             System.out.print("Enter a word to look up or q to quit: ");
             word = scan.nextLine();
         }
